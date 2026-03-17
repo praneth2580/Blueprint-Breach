@@ -553,26 +553,27 @@ project-root/
 ├── package.json
 │
 └── src/
-    └── js/
+    ├── main.ts
+    └── ts/
         ├── engine/
-        │   ├── grid.js
-        │   └── renderer.js
+        │   ├── grid.ts
+        │   └── renderer.ts
         │
         ├── generation/
-        │   ├── buildingGenerator.js
-        │   └── roomGenerator.js
+        │   ├── buildingGenerator.ts
+        │   └── roomGenerator.ts
         │
         ├── systems/
-        │   ├── visibilitySystem.js
-        │   ├── soundSystem.js
-        │   └── evidenceSystem.js
+        │   ├── visibilitySystem.ts
+        │   ├── soundSystem.ts
+        │   └── evidenceSystem.ts
         │
         ├── entities/
-        │   ├── player.js
-        │   └── enemy.js
+        │   ├── player.ts
+        │   └── enemy.ts
         │
         └── missions/
-            └── missionSystem.js
+            └── missionSystem.ts
 ```
 
 ---

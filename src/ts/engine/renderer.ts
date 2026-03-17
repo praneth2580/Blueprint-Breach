@@ -1,11 +1,12 @@
-// renderer.js - UI and Grid Renderer
+// renderer.ts - UI and Grid Renderer
 // Uses CSS Grid to render the generated tiles as described in the README
+import type { Tile } from './grid';
 
-export function initRenderer() {
+export function initRenderer(): void {
     console.log("Renderer initialized. Waiting for grid data...");
 }
 
-export function renderGrid(gridData, width, height) {
+export function renderGrid(gridData: Tile[], width: number, height: number): void {
     const container = document.getElementById('grid-container');
     if (!container) return;
     
@@ -13,7 +14,7 @@ export function renderGrid(gridData, width, height) {
     container.style.gridTemplateRows = `repeat(${height}, 1fr)`;
     container.innerHTML = '';
     
-    gridData.forEach(tile => {
+    gridData.forEach((tile: Tile) => {
         const div = document.createElement('div');
         div.className = 'tile';
         // Initial fog of war hidden state
