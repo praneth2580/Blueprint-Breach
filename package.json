@@ -1,0 +1,18 @@
+{
+  "name": "blueprint-breach",
+  "version": "1.0.0",
+  "description": "A procedural **2D tactical strategy game** built using **HTML, CSS, and JavaScript**. The player commands a SWAT-style squad tasked with clearing **randomly generated buildings**, rescuing hostages, collecting evidence, and neutralizing threats.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "vite": "^8.0.0"
+  }
+}

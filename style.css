@@ -1,0 +1,91 @@
+:root {
+    --bg-color: #121212;
+    --text-color: #ededed;
+    --grid-bg: #1a1a1a;
+    --cell-border: #333333;
+    --ui-bg: #242424;
+    --accent: #d32f2f;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace; /* Tactical/Intel aesthetic */
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#game-container {
+    display: grid;
+    grid-template-areas: 
+        "header header"
+        "grid sidebar";
+    grid-template-columns: 800px 300px;
+    grid-template-rows: 60px 800px;
+    gap: 15px;
+    background-color: #000;
+    padding: 15px;
+    border: 1px solid var(--cell-border);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+#ui-header {
+    grid-area: header;
+    background-color: var(--ui-bg);
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--cell-border);
+}
+
+#ui-header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#grid-container {
+    grid-area: grid;
+    background-color: var(--grid-bg);
+    display: grid;
+    /* CSS Grid used for drawing the game tiles as specified in the README */
+    /* Defaulting to a 20x20 grid, will be dynamically modified by JS */
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+    border: 1px solid var(--cell-border);
+}
+
+.tile {
+    border: 1px solid var(--cell-border);
+    background-color: #0d0d0d;
+}
+
+.tile:hover {
+    background-color: #2a2a2a;
+    cursor: crosshair;
+}
+
+#ui-sidebar {
+    grid-area: sidebar;
+    background-color: var(--ui-bg);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    border: 1px solid var(--cell-border);
+}
+
+#ui-sidebar h3 {
+    margin-top: 0;
+    border-bottom: 2px solid var(--cell-border);
+    padding-bottom: 10px;
+    color: var(--accent);
+    text-transform: uppercase;
+}

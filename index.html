@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tactical Building Clearance</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div id="game-container">
+        <header id="ui-header">
+            <h1>Tactical Building Clearance</h1>
+            <div id="status-bar">Intel needed...</div>
+        </header>
+        
+        <main id="grid-container">
+            <!-- The tactical grid will be injected here by renderer.js -->
+        </main>
+        
+        <aside id="ui-sidebar">
+            <div id="action-menu">
+                <h3>Actions</h3>
+                <!-- Actions driven by JS -->
+                <p>Awaiting Orders</p>
+            </div>
+            <div id="entity-info">
+                <h3>Selection</h3>
+                <!-- Entity info -->
+                <p>None</p>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Scripts (ES6 Modules) -->
+    <script type="module">
+        import { initGrid } from './src/js/engine/grid.js';
+        import { initRenderer } from './src/js/engine/renderer.js';
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log("Game structural modules loaded.");
+            initGrid();
+            initRenderer();
+        });
+    </script>
+</body>
+</html>
