@@ -6,6 +6,20 @@ export enum floorType {
     Parking = 'parking',
 }
 
+export interface hallway {
+    id: string;
+    x: number;
+    y: number;
+    width: number;
+    height: number;
+    tileIds: string[];
+    doors: string[];
+    windows: string[];
+    lights: string[];
+    baseLightLevel: number;
+    baseSoundLevel: number;
+}
+
 export interface floor {
     id: string;
     level: number;
@@ -19,6 +33,7 @@ export interface floor {
     liftIds: string[]; // room IDs
     entryPoints: string[];  // tile IDs for squad insertion (windows, doors, roof access)
     hasPower: boolean;
+    hallways: hallway[];
     discovered: boolean;
     estimatedEnemies: number;   // from pre-mission intel (may be inaccurate)
     estimatedHostages: number;

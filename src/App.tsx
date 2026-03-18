@@ -12,6 +12,7 @@ const App: React.FC = () => {
     useEffect(() => {
         // Initialize grid on mount
         const initialGrid = createGrid(GRID_WIDTH, GRID_HEIGHT);
+        const alley = generateAlley(initialGrid);
         setGridData(initialGrid);
         console.log("Game structural modules loaded via App component.");
     }, []);

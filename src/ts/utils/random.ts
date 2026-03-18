@@ -13,7 +13,11 @@
  * weightedRandom(["common", "rare", "legendary"], [0.7, 0.25, 0.05]);
  * // Returns "common" 70% of the time, "rare" 25%, "legendary" 5%
  */
-export function weightedRandom(options: string[], weights: number[]): string {
+export function weightedRandom(data: { value: string, probability: number }[]): string {
+
+    const options = data.map(item => item.value);
+    const weights = data.map(item => item.probability);
+
     if (options.length !== weights.length) {
         throw new Error("Options and weights arrays must be the same length.");
     }
