@@ -1,6 +1,7 @@
 // grid.ts - Grid Engine
 // Manages the tile grid system, storing metadata about each tile
 import { type Tile, tileType, fogState } from "../data/rooms";
+export { type Tile, tileType, fogState } from "../data/rooms";
 
 export function initGrid(): void {
     console.log("Grid Engine initialized.");
