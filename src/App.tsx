@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import Grid from './components/Grid';
 import { createGrid, type Tile } from './ts/engine/grid';
+import { generateAlley } from './ts/generation/buildingGenerator';
 
 const App: React.FC = () => {
     const GRID_WIDTH = 100;
